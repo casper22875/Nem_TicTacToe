@@ -17,4 +17,20 @@ end
 
 board_status("Shall we play a game?")
 board_status("The current board is")
-something
+
+
+
+
+
+def set_players
+	puts "Player1 choose x or o"
+	p1choice = gets.chomp.upcase
+	puts "Player 1 has chosen #{p1choice}"
+		if p1choice == "X"
+		p2choice = "O"
+		else p2choice = "X"
+		end
+		puts "Player1 is #{p1choice} and Player 2 is #{p2choice}"
+	end
+
+set_players
