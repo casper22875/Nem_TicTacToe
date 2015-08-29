@@ -1,22 +1,25 @@
 # print "Current Board"
 # print visualization of board
 
-def board_status(message)
+def board_status(message, board_array)
 
+#board_positions_array[0] = "X"
 puts message
 puts """
   |  |
- 1| 2| 3
+#{board_array[0]} | #{board_array[1]}| #{board_array[2]}
 __|__|__   
   |  |  
- 4| 5| 6
+#{board_array[3]} | #{board_array[4]}| #{board_array[5]}
 __|__|__
- 7| 8| 9
+#{board_array[6]} | #{board_array[7]}| #{board_array[8]}
   |  |"""
 end
 
-board_status("Shall we play a game?")
-board_status("The current board is")
+board_positions_array = [ "0","1","2","3","4","5","6","7","8"]
+
+#board_status("Shall we play a game?")
+board_status("Board positions", board_positions_array)
 
 def p1choice
 	puts "Player1 choose x or o"
@@ -31,9 +34,15 @@ def p2choice(p1choice)
 end
 
 def set_players
-	p1marker = p1choice
-	p2marker = p2choice(p1marker)
-			puts "Player1 is #{p1marker} and Player 2 is #{p2marker}"
+	@p1marker = p1choice
+	@p2marker = p2choice(@p1marker)
+			puts "Player1 is #{@p1marker} and Player 2 is #{@p2marker}"
 end
 
 set_players
+
+puts "Player1(#{@p1marker}) which square do you want?"
+sqchoice = gets.to_i
+
+
+puts "Player1 has chosen #{sqchoice}"
