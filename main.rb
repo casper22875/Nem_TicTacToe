@@ -17,9 +17,10 @@ __|__|__
 end
 
 board_positions_array = [ "0","1","2","3","4","5","6","7","8"]
+empty = Array.new(9, " ")
 
-#board_status("Shall we play a game?")
-board_status("Board positions", board_positions_array)
+board_status("Shall we play a game?", board_positions_array)
+board_status("The current board is:", empty)
 
 def p1choice
 	puts "Player1 choose x or o"
