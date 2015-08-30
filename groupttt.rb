@@ -39,3 +39,9 @@ sqchoice = gets.to_i
 puts "Player 1 has chosen #{sqchoice}"
 currentboard[sqchoice] = "#{player1}"
 puts arena("This is the current board",currentboard)
+
+puts "Player 2 , please a square between 0-8"
+sqchoice2 = gets.to_i
+puts "Player 2 has chosen #{sqchoice2}."
+currentboard[sqchoice2] = "#{player2}"
+puts arena("This is the current board", currentboard)
