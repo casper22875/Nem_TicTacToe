@@ -34,4 +34,8 @@ end
 player2 = player2_marker(player1)
 puts "player 2 is #{player2}"
 
-
+puts "Player 1 please choose a square between 0-8"
+sqchoice = gets.to_i
+puts "Player 1 has chosen #{sqchoice}"
+currentboard[sqchoice] = "#{player1}"
+puts arena("This is the current board",currentboard)
