@@ -1,13 +1,19 @@
+boardarray=[*(0..8)]
+# print boardarray
+currentboard=Array.new(9," ")
 
-def arena(arena_message)
+def arena(arena_message,boardarray)
 puts arena_message
-puts """ __|__|__
- __|__|__
-   |  |  """
+puts """ _#{boardarray[0]}_|_#{boardarray[1]}_|_#{boardarray[2]}_
+ _#{boardarray[3]}_|_#{boardarray[4]}_|_#{boardarray[5]}_
+  #{boardarray[6]} | #{boardarray[7]} | #{boardarray[8
+ ]} """
 end
 
-arena("Welcome to Tic Tac Toe")
-arena("This is the current board")
+
+arena("Welcome to Tic Tac Toe",boardarray)
+arena("This is the current board",currentboard)
+
 
 def player1_marker
 	puts "Player 1 please choose X or O."
@@ -27,4 +33,5 @@ end
 
 player2 = player2_marker(player1)
 puts "player 2 is #{player2}"
+
 
