@@ -42,19 +42,24 @@ end
 
 set_players
 
+def p1_square_loop
 puts "Player1(#{@p1marker}) which square do you want?"
-sqchoicep1 = gets.to_i
+@sqchoicep1 = gets.to_i
+end
 
+p1_square_loop
 
-puts "Player1 has chosen #{sqchoicep1}"
+current_board[@sqchoicep1] = "#{@p1marker}"
+board_status("Player1 (#{@p1marker}) chose space #{@sqchoicep1}", current_board)
 
-current_board[sqchoicep1] = "#{@p1marker}"
-board_status("Player1 (#{@p1marker}) chose space #{sqchoicep1}", current_board)
- 
+def p2_square_loop
 puts "Player2 (#{@p2marker})which square do you want?"
-sqchoicep2 = gets.to_i
+@sqchoicep2 = gets.to_i
+end
 
-def repeat_kill_loop(p1sqch,p2sqch)
+p2_square_loop
+
+ def repeat_kill_loop(p1sqch,p2sqch)
 		while
 		p2sqch == p1sqch
 		puts "Please choose another square"
@@ -65,4 +70,12 @@ def repeat_kill_loop(p1sqch,p2sqch)
 	end
 end
 
-repeat_kill_loop(sqchoicep1,sqchoicep2)
+repeat_kill_loop(@sqchoicep1,@sqchoicep2)
+
+current_board[@sqchoicep2] = "#{@p2marker}"
+board_status("Player2 (#{@p2marker}) chose space #{@sqchoicep2}", current_board)
+
+p1_square_loop
+
+current_board[@sqchoicep1] = "#{@p1marker}"
+board_status("Player1 (#{@p1marker}) chose space #{@sqchoicep1}", current_board)
