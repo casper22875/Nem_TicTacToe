@@ -1,10 +1,10 @@
-puts "Welcome to Group Tic Tac Toe"
 
-puts """
+def arena(arena_message)
+puts arena_message
+puts """ __|__|__
+ __|__|__
+   |  |  """
+end
 
- __|__|__
- __|__|__
-     |    |"""
-	 
-			
-	 
+arena("Welcome to Tic Tac Toe")
+arena("This is the current board")
