@@ -45,3 +45,4 @@ sqchoice2 = gets.to_i
 puts "Player 2 has chosen #{sqchoice2}."
 currentboard[sqchoice2] = "#{player2}"
 puts arena("This is the current board", currentboard)
+

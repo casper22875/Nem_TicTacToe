@@ -79,3 +79,11 @@ p1_square_loop
 
 current_board[@sqchoicep1] = "#{@p1marker}"
 board_status("Player1 (#{@p1marker}) chose space #{@sqchoicep1}", current_board)
+
+p2_square_loop
+
+current_board[@sqchoicep2] = "#{@p2marker}"
+board_status("Player2 (#{@p2marker}) chose space #{@sqchoicep2}", current_board)
+
+repeat_kill_loop(@sqchoicep1,@sqchoicep2)
+
