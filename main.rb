@@ -59,3 +59,23 @@ end
 
 p2_square_loop
 
+ def repeat_kill_loop(p1sqch,p2sqch)
+		while
+		p2sqch == p1sqch
+		puts "Please choose another square"
+		p2sqch = gets.to_i
+		until
+		p2sqch != p1sqch
+		end
+	end
+end
+
+repeat_kill_loop(@sqchoicep1,@sqchoicep2)
+
+current_board[@sqchoicep2] = "#{@p2marker}"
+board_status("Player2 (#{@p2marker}) chose space #{@sqchoicep2}", current_board)
+
+p1_square_loop
+
+current_board[@sqchoicep1] = "#{@p1marker}"
+board_status("Player1 (#{@p1marker}) chose space #{@sqchoicep1}", current_board)
