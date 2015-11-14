@@ -69,23 +69,24 @@ end
 def repeater_loop
 	
 	
-	# puts "Player 1 please choose a square between 0-8"
-	# sqchoice = gets.to_i
-	# puts "Player 1 has chosen #{sqchoice}"
+	puts "Player 1 please choose a square between 0-8"
+	sqchoice = gets.to_i
+	currentboard[sqchoice] = "#{@player1}"
+	puts "Player 1 has chosen #{sqchoice}"
 	
 	
 	# puts "Player 2 , please choose a square between 0-8"
 	# board_arrays[sqchoice] = "#{@player1}"
 	# puts arena("This is the current board",board_arrays)
-# end
+end
 
-# def square_choices2
-	# puts "Player 2 , please choose a square between 0-8"
-	# sqchoice2 = gets.to_i
-	# puts "Player 2 has chosen #{sqchoice2}."
-	# currentboard[sqchoice2] = "#{@player2}"
-	# puts arena("This is the current board", currentboard)
-# end
+def square_choices2
+	puts "Player 2 , please choose a square between 0-8"
+	sqchoice2 = gets.to_i
+	puts "Player 2 has chosen #{sqchoice2}."
+	currentboard[sqchoice2] = "#{@player2}"
+	puts arena("This is the current board", currentboard)
+end
 
 def full_board?(array)
 	if array.include? " "

@@ -1,31 +1,30 @@
-<form action = "/move" method = "POST">
-player 1 is: <%=player1%> <br>
-player 2 is: <%=player2%><br>
-<table border=".5" style="width:30%">
-  <tr>
-    <td><%=board[0]%></td>
-    <td><%=board[1]%></td>		
-    <td><%=board[2]%></td>
-  </tr>
-  <tr>
-    <td><%=board[3]%></td>
-    <td><%=board[4]%></td>		
-    <td><%=board[5]%></td>
-  </tr>
-  <tr>
-    <td><%=board[6]%></td>
-    <td><%=board[7]%></td>		
-    <td><%=board[8]%></td>
-  </tr>
-</table>
+<!DOCTYPE html>
 
-</body>
-</html>
+<head>
+<link rel="stylesheet" href="/style.css">
+</head>
+
+<body bgcolor="green">
+
+<div>
 <br>
+<img src="/mm.png">
 
-Player1, please choose a square. <br> <input type="text" name="choice">
-<p><input type="submit" value="Submit Move" name="submit" /></p>
-<%message%>
+<p style="color:red"><b>Let's play Tic Tac Toe!
+<br><%=message%></b></p>
 
-</form>
 
+
+<form action="/move" method="POST"> 
+
+<table> 
+ <tr>
+  <td class="br"> <input type="radio" name="choice" value="1"><%=board[0]%></td><td class="br"> <input type="radio" name="choice" value="2"><%=board[1]%></td><td class="b"> <input type="radio" name="choice" value="3"><%=board[2]%></td>
+ </tr><tr>
+  <td class="br"> <input type="radio" name="choice" value="4"><%=board[3]%></td><td class="br"> <input type="radio" name="choice" value="5"><%=board[4]%></td><td class="b"> <input type="radio" name="choice" value="6"><%=board[5]%></td>
+ </tr><tr>
+  <td class="r"> <input type="radio" name="choice" value="7"><%=board[6]%></td><td class="r"> <input type="radio" name="choice" value="8"><%=board[7]%></td><td> <input type="radio" name="choice" value="9"><%=board[8]%></td>
+ </tr>
+</table>
+  <input type="submit" name="submit" value ="Click To Submit Choice">
+ </form> 
