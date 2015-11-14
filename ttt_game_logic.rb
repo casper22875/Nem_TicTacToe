@@ -6,7 +6,7 @@ def initialize(board,player1,player2,current)
 	@board = board_positions_array
 	@player1 = ""
 	@player2 = ""
-	@current = @player1
+	@current = 1
 end
 
 

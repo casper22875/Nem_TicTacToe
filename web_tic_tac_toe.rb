@@ -11,10 +11,10 @@ end
 post '/board' do
 	game.player1 = params[:selection].upcase
 	player_marker =game.current_player()
-		# if game.valid_marker?(game.player1) == true
+		
 	game.player2 = game.p2_marker(game.player1)
 	erb :move ,:locals => {:current => game.current,:message => "Player1 is #{game.player1} and Player2 is #{game.player2}", :board => game.board}
-	# end
+	
 end
 
 post '/move' do	
@@ -40,10 +40,10 @@ post '/move' do
 	choice = params[:selection]
 	game = TicTacToe.new(@board, "", "", 1)
 		if choice == "y"
-			erb :board, :locals => {:move => game.board,:message => "Let's play some tic tac toe!", :message2 => "Do you want X or O ?", :message3 => "", :message4 => ""}
+			erb :board, :locals => {:board => game.board,:message => "Let's play some tic tac toe!", :message2 => "Do you want X or O ?", :message3 => "", :message4 => ""}
 			
 		else
-			erb :board, :locals => {:move => game.board,:message => "Giving up already?", :message2 => "", :message3 => "", :message4 => ""}
+			erb :board, :locals => {:board => game.board,:message => "Giving up already?", :message2 => "", :message3 => "", :message4 => ""}
 	
 		end
 
